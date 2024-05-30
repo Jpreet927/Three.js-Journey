@@ -64,7 +64,7 @@ fontLoader.load("/fonts/helvetiker_bold.typeface.json", (font) => {
     //     matcap: matcapTexture,
     // });
 
-    for (let i = 0; i < 500; i++) {
+    for (let i = 0; i < 250; i++) {
         const donut = new THREE.Mesh(donutGeometry, material);
         donut.position.x = (Math.random() - 0.5) * 10;
         donut.position.y = (Math.random() - 0.5) * 10;
