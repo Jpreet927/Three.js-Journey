@@ -31,7 +31,7 @@ matcapTexture.colorSpace = THREE.SRGBColorSpace;
  */
 const fontLoader = new FontLoader();
 fontLoader.load("/fonts/helvetiker_bold.typeface.json", (font) => {
-    const textGeometry = new TextGeometry("Jaipreet Singh", {
+    const textGeometry = new TextGeometry("Interframe, watch AOT", {
         font,
         size: 0.5,
         depth: 0.2,
