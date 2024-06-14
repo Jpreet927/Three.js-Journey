@@ -6,6 +6,11 @@ export default class Environment {
         this.experience = new Experience();
         this.scene = this.experience.scene;
         this.resources = this.experience.resources;
+        this.debug = this.experience.debug;
+
+        if (this.debug.active) {
+            this.debugFolder = this.debug.ui.addFolder("environment");
+        }
 
         this.setSunlight();
         this.setEnvironmentMap();
@@ -19,6 +24,33 @@ export default class Environment {
         this.sunlight.shadow.normalBias = 0.05;
         this.sunlight.position.set(3.5, 2, -1.25);
         this.scene.add(this.sunlight);
+
+        if (this.debug.active) {
+            this.debugFolder
+                .add(this.sunlight, "intensity")
+                .name("sunlightIntensity")
+                .min(0)
+                .max(10)
+                .step(0.001);
+            this.debugFolder
+                .add(this.sunlight.position, "x")
+                .name("sunlightX")
+                .min(-5)
+                .max(5)
+                .step(0.001);
+            this.debugFolder
+                .add(this.sunlight.position, "y")
+                .name("sunlightY")
+                .min(-5)
+                .max(5)
+                .step(0.001);
+            this.debugFolder
+                .add(this.sunlight.position, "z")
+                .name("sunlightZ")
+                .min(-5)
+                .max(5)
+                .step(0.001);
+        }
     }
 
     setEnvironmentMap() {
@@ -30,7 +62,7 @@ export default class Environment {
 
         this.scene.environment = this.environmentMap.texture;
 
-        this.setEnvironmentMap.updateMaterials = () => {
+        this.environmentMap.updateMaterials = () => {
             this.scene.traverse((child) => {
                 if (
                     child instanceof THREE.Mesh &&
@@ -44,6 +76,16 @@ export default class Environment {
             });
         };
 
-        this.setEnvironmentMap.updateMaterials();
+        this.environmentMap.updateMaterials();
+
+        if (this.debug.active) {
+            this.debugFolder
+                .add(this.environmentMap, "intensity")
+                .name("envMapIntensity")
+                .min(0)
+                .max(4)
+                .step(0.001)
+                .onChange(this.environmentMap.updateMaterials);
+        }
     }
 }
