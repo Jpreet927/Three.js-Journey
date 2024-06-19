@@ -8,3 +8,4 @@ Documenting lessons/projects from Three.js Journey
 2. [Haunted House](https://threejs-haunted-house-psi.vercel.app/)
 3. [Galaxy Generator](https://threejs-galaxy-jet.vercel.app/)
 4. [Environment Maps](https://threejs-environment-map.vercel.app/)
+5. [Animated Galaxy](https://threejs-animated-galaxy-eight.vercel.app/)
