@@ -14,3 +14,4 @@ Documenting lessons/projects from Three.js Journey
 8. [Wobbly Sphere](https://threejs-wobbly-sphere.vercel.app/)
 9. [Procedural Terrain](https://threejs-procedural-terrain.vercel.app/)
 10. [Portal Scene](https://threejs-portal-scene-sooty.vercel.app/)
+11. [Simple Portfolio](https://threejs-simple-portfolio.vercel.app/)
