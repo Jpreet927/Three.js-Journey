@@ -15,3 +15,4 @@ Documenting lessons/projects from Three.js Journey
 9. [Procedural Terrain](https://threejs-procedural-terrain.vercel.app/)
 10. [Portal Scene](https://threejs-portal-scene-sooty.vercel.app/)
 11. [Simple Portfolio](https://threejs-simple-portfolio.vercel.app/)
+12. [React Three Fiber Game](https://threejs-r3f-game-three.vercel.app/)
